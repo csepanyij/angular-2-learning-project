@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import 'rxjs/Rx';
+
 import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
 
@@ -10,7 +13,8 @@ import { ProductService } from './products/product.service';
             <pm-products></pm-products>
         </div>
     `,
-    providers: [ProductService]
+    providers: [ProductService,
+                HttpModule]
 })
 export class AppComponent {
     pageTitle: string = 'Angular2: Getting Started'  
